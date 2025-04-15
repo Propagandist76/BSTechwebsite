@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- Website - www.bs-techsupport.com -->
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BS Tech | Feedback</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="menu">
+        <div class="logo">
+          <a href="#">BS Tech</a>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="img"></div>
+    <div class="center">
+            <div class="text">Have feedback?</div>
+            <div class="sub_text">We would love to hear it!</div>
+            <div class="contact-box">
+                <form name="feedback" method="POST" data-netlify="true">
+                    <!-- required for Netlify -->
+                    <input type="hidden" name="form-name" value="feedback" />
+    
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="What is your name? (Optional)"/>
+    
+                    <label for="message">Feedback</label>
+                    <textarea id="message" name="message" rows="4" placeholder="You can enter your feedback here!" required></textarea>
+    
+                    <button type="submit">Submit Feedback</button>
+                </form>
+            </div>
+    </div>
+  </body>
+</html>
