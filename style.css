@@ -1,318 +1,386 @@
-/* Import Poppins font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-
 :root {
-  --vh: 1vh;
+    --vh: 1vh;
 }
 
-/* Reset styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-body {
-  width: 100%;
-  overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 ::selection {
-  color: #000;
-  background: #fff;
+    color: #000;
+    background: #fff;
 }
 
-/* Navigation */
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: #1b1b1b;
-  width: 100%;
-  padding: 10px 0;
-  z-index: 12;
+    position: fixed;
+    background: #1b1b1b;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 12;
 }
 
 nav .menu {
-  max-width: 1250px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
 .menu .logo a {
-  text-decoration: none;
-  color: #fff;
-  font-size: clamp(24px, 5vw, 35px);
-  font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
 }
 
 .menu ul {
-  display: inline-flex;
-  list-style: none;
+    display: inline-flex;
 }
 
 .menu ul li {
-  margin-left: 7px;
+    list-style: none;
+    margin-left: 7px;
 }
 
 .menu ul li:first-child {
-  margin-left: 0;
+    margin-left: 0px;
 }
 
 .menu ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 8px 15px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
 .menu ul li a:hover {
-  background: #fff;
-  color: black;
+    background: #fff;
+    color: black;
 }
 
-/* Hamburger menu button */
-nav .menu .menu-toggle {
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-  padding: 5px 10px;
-  line-height: 1;
-  background: rgba(255, 255, 255, 0.2); /* Visibility aid */
-}
-
-/* Hero image */
 .img {
-  width: 100%;
-  min-height: calc(var(--vh, 1vh) * 100);
-  background: url("logo.png") no-repeat center/cover;
-  position: relative;
+    background: url("logo.png") no-repeat;
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 100);
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
 .img::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.4);
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
 }
 
-/* Center content */
 .center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  max-width: 1200px;
-  padding: clamp(10px, 4vw, 20px);
-  text-align: center;
-  box-sizing: border-box;
+    padding-top: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    max-height: 80vh;
+    overflow-y: auto;
 }
 
 .center .title {
-  color: #fff;
-  font-size: clamp(24px, 6vw, 55px);
-  font-weight: 600;
+    color: #fff;
+    font-size: clamp(24px, 5vw, 55px);
+    font-weight: 600;
 }
 
 .center .sub_title {
-  color: #fff;
-  font-size: clamp(20px, 5vw, 40px);
-  font-weight: 600;
-  margin-top: 10px;
+    color: #fff;
+    font-size: clamp(22px, 4.5vw, 52px);
+    font-weight: 600;
+}
+
+.center .text {
+    color: #fff;
+    font-size: clamp(20px, 4vw, 40px);
+    font-weight: 600;
+}
+
+.center .sub_text {
+    color: #fff;
+    font-size: clamp(18px, 3.5vw, 38px);
+    font-weight: 600;
+}
+
+.center .small_text {
+    color: #fff;
+    font-size: clamp(14px, 2.8vw, 22px);
+    font-weight: 600;
 }
 
 .center .btns {
-  margin-top: 20px;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.center .btns button,
-.center .btns .btn {
-  height: 55px;
-  width: 100%;
-  max-width: 170px;
-  border-radius: 5px;
-  border: 2px solid white;
-  font-size: clamp(16px, 4vw, 18px);
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    margin-top: 20px;
 }
 
 .center .btns button {
-  background: none;
-  color: #fff;
+    height: 55px;
+    width: 170px;
+    border-radius: 5px;
+    border: none;
+    margin: 0 10px;
+    border: 2px solid white;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 10px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
 }
 
-.center .btns button:hover {
-  background: white;
-  color: black;
+.center .btns button:first-child {
+    color: #fff;
+    background: none;
 }
 
-.center .btns .btn {
-  background: white;
-  color: black;
+.btns button:first-child:hover {
+    background: white;
+    color: black;
 }
 
-.center .btns .btn:hover {
-  background: #f0f0f0;
+.center .btns button:last-child {
+    background: white;
+    color: black;
 }
 
-/* Contact, Service, About boxes */
-.contact-box,
-.service-box,
-.about-box {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: clamp(1rem, 4vw, 1.5rem);
-  border-radius: 10px;
-  width: 100%;
-  max-width: 720px;
-  margin: clamp(1rem, 3vw, 1.5rem) auto;
-  color: white;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  box-sizing: border-box;
+
+/* Contact Box Styles */
+
+.contact-box {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 720px;
+    margin: 2rem auto;
+    color: white;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
+
+
+/* Form Layout */
 
 .contact-box form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
 }
 
+
+/* Labels */
+
 .contact-box label {
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
 }
+
+
+/* Input Fields, Select, Textarea */
 
 .contact-box input,
 .contact-box select,
 .contact-box textarea {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  border: 1px solid #444;
-  border-radius: 5px;
-  padding: clamp(0.4rem, 2vw, 0.6rem);
-  font-size: clamp(14px, 3.5vw, 16px);
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    color: #fff !important;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    appearance: none;
 }
+
+
+/* Placeholder text styling */
 
 .contact-box input::placeholder,
 .contact-box textarea::placeholder {
-  color: #ccc;
+    color: #ccc;
 }
+
+
+/* Focus Effects */
 
 .contact-box input:focus,
 .contact-box select:focus,
 .contact-box textarea:focus {
-  outline: none;
-  border-color: #888;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    outline: none;
+    border-color: #888;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
 }
 
+
+/* Submit Button */
+
 .contact-box button {
-  margin-top: 1.5rem;
-  background-color: #000;
-  color: white;
-  border: 1px solid #444;
-  padding: clamp(0.5rem, 2vw, 0.75rem);
-  font-size: clamp(14px, 3.5vw, 16px);
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.1s;
+    margin-top: 1.5rem;
+    background-color: #000;
+    color: white;
+    border: 1px solid #444;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
 }
 
 .contact-box button:hover {
-  background-color: #222;
-  transform: scale(1.02);
+    background-color: #222;
+    transform: scale(1.02);
+}
+
+
+/* Services Box */
+
+.service-box {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 720px;
+    margin: 2rem auto;
+    color: white;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+.about-box {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 720px;
+    margin: 2rem auto;
+    color: white;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: left !important; /* Override parent centering */
 }
 
 .about-box .text {
-  font-size: clamp(14px, 2.5vw, 18px);
-  font-weight: 400;
+    font-size: clamp(16px, 2.5vw, 24px);
 }
 
 .about-box .sub_text {
-  font-size: clamp(12px, 2vw, 16px);
-  font-weight: 400;
+    font-size: clamp(14px, 2vw, 22px);
 }
 
-/* Mobile styles */
+
+@media screen and (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 10px;
+    }
+    .menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .menu ul li {
+        margin: 8px 0;
+    }
+    .center .title {
+        font-size: 32px;
+    }
+    .center .sub_title {
+        font-size: 30px;
+    }
+    .center .text {
+        font-size: 26px;
+    }
+    .center .sub_text {
+        font-size: 24px;
+    }
+    .center .small_text {
+        font-size: 18px;
+    }
+    .center .btns {
+        flex-direction: column;
+        align-items: center;
+    }
+    .center .btns button {
+        width: 90%;
+        margin: 10px 0;
+        font-size: 18px;
+    
+    }
+
+    .about-box .text {
+        font-size: 20px;
+    }
+    .about-box .sub_text {
+        font-size: 18px;
+    }
+    .contact-box,
+    .about-box,
+    .service-box {
+        padding: 1rem;
+        margin: 1rem;
+    }
+}
+
+
+/* Menu toggle button */
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* Mobile Navigation */
+
 @media (max-width: 768px) {
-  nav .menu {
-    flex-direction: row; /* Keep logo and toggle in one row */
-    align-items: center;
-    padding: 0 10px;
-  }
-  nav .menu .menu-toggle {
-    display: block; /* Show hamburger */
-  }
-  nav .menu ul {
-    display: none; /* Hide menu by default */
-    flex-direction: column;
-    width: 100%;
-    background-color: #1b1b1b;
-    padding: 0;
-    margin-top: 10px; /* Space below logo/toggle */
-  }
-  nav .menu ul.active {
-    display: flex; /* Show when toggled */
-  }
-  nav .menu ul li {
-    width: 100%;
-    margin: 0;
-    border-top: 1px solid #333;
-  }
-  nav .menu ul li a {
-    display: block;
-    padding: 12px;
-  }
-  .center {
-    padding: clamp(8px, 3vw, 15px);
-  }
-  .center .title {
-    font-size: clamp(20px, 6vw, 32px);
-  }
-  .center .sub_title {
-    font-size: clamp(18px, 5vw, 28px);
-  }
-  .center .btns {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-  .center .btns button,
-  .center .btns .btn {
-    max-width: 200px;
-    height: 45px;
-    font-size: clamp(14px, 4vw, 16px);
-  }
-  .contact-box,
-  .service-box,
-  .about-box {
-    padding: clamp(0.75rem, 3vw, 1rem);
-    margin: clamp(0.5rem, 2vw, 1rem);
-  }
-  .about-box .text {
-    font-size: clamp(12px, 2.5vw, 16px);
-  }
-  .about-box .sub_text {
-    font-size: clamp(10px, 2vw, 14px);
-  }
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+        padding: 5px 10px;
+    }
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #1b1b1b;
+    }
+    .menu ul.active {
+        display: flex;
+    }
+    .menu ul li {
+        width: 100%;
+        text-align: left;
+        border-top: 1px solid #333;
+    }
+    .menu ul li a {
+        display: block;
+        width: 100%;
+        padding: 12px;
+    }
 }

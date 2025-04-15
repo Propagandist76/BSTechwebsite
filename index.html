@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <!-- Website - www.bs-techsupport.com -->
+
 <html lang="en" dir="ltr">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BS Tech | Home</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  </head>
-  <body>
+</head>
+
+<body>
+    <script src="scripts.js"></script>
     <nav>
-      <div class="menu">
-        <div class="logo">
-          <a href="#">BS Tech</a>
+        <div class="menu">
+            <div class="logo">
+                <a href="#">BS Tech</a>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
         </div>
-        <!-- Hamburger menu button -->
-        <div class="menu-toggle"><i class="fas fa-bars"></i><span class="fallback">☰</span></div>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="feedback.html">Feedback</a></li>
-        </ul>
-      </div>
     </nav>
     <div class="img"></div>
     <div class="center">
-      <div class="title">Local Tech Support</div>
-      <div class="sub_title">For Small Business and residential needs</div>
-      <div class="btns">
-        <button>Learn More</button>
-        <!-- Styled link instead of button for valid HTML -->
-        <a href="contact.html" class="btn">Contact Us</a>
-      </div>
+        <div class="title">Local Tech Support</div>
+        <div class="sub_title">For Small Business and residential needs</div>
+        <div class="btns">
+            <button>Learn More</button>
+            <a href="contact.html"><button>Contact Us</button></a>
+        </div>
     </div>
-    <!-- Link to JavaScript -->
-    <script src="script.js"></script>
-  </body>
+</body>
+
 </html>
