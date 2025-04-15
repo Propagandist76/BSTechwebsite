@@ -11,13 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
         subtitle.textContent = "Small Business & Home IT Support";
     }
 
-    // Add click alerts to buttons
+    // Add click alerts to buttons (commented for testing)
+    /*
     const buttons = document.querySelectorAll(".btns button");
     buttons.forEach((btn, index) => {
         btn.addEventListener("click", () => {
             alert(`Button ${index + 1} clicked!`);
         });
     });
+    */
 
     // Close menu on nav link click (mobile UX)
     const navLinks = document.querySelectorAll("nav .menu ul li a");
@@ -34,6 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.querySelector(".menu-toggle");
     if (menuToggle) {
         menuToggle.addEventListener("click", toggleMenu);
+        console.log("Menu toggle initialized"); // Debug
+    } else {
+        console.error("Menu toggle not found");
     }
 });
 
@@ -42,5 +47,6 @@ function toggleMenu() {
     const menuList = document.querySelector("nav .menu ul");
     if (menuList) {
         menuList.classList.toggle("active");
+        console.log("Menu toggled, active:", menuList.classList.contains("active"));
     }
 }

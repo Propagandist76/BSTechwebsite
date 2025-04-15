@@ -1,9 +1,11 @@
+/* Import Poppins font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 :root {
   --vh: 1vh;
 }
 
+/* Reset styles */
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +23,7 @@ body {
   background: #fff;
 }
 
+/* Navigation */
 nav {
   position: fixed;
   background: #1b1b1b;
@@ -73,14 +76,21 @@ nav .menu {
   color: black;
 }
 
+/* Hamburger menu button */
 .menu-toggle {
   display: none;
   font-size: 24px;
   color: white;
   cursor: pointer;
   padding: 5px 10px;
+  line-height: 1;
 }
 
+.menu-toggle .fallback {
+  display: none;
+}
+
+/* Hero image */
 .img {
   width: 100%;
   min-height: calc(var(--vh, 1vh) * 100);
@@ -96,6 +106,7 @@ nav .menu {
   background: rgba(0, 0, 0, 0.4);
 }
 
+/* Center content */
 .center {
   position: absolute;
   top: 50%;
@@ -165,6 +176,7 @@ nav .menu {
   background: #f0f0f0;
 }
 
+/* Contact, Service, About boxes */
 .contact-box,
 .service-box,
 .about-box {
@@ -243,6 +255,7 @@ nav .menu {
   font-weight: 400;
 }
 
+/* Mobile styles */
 @media (max-width: 768px) {
   .menu {
     flex-direction: column;
@@ -252,6 +265,13 @@ nav .menu {
   .menu-toggle {
     display: block;
     margin-left: auto;
+    background: rgba(255, 255, 255, 0.1); /* Fallback visibility */
+  }
+  .menu-toggle .fas {
+    display: inline-block;
+  }
+  .menu-toggle .fallback {
+    display: none; /* Hide fallback unless Font Awesome fails */
   }
   .menu ul {
     display: none;
@@ -303,5 +323,15 @@ nav .menu {
   }
   .about-box .sub_text {
     font-size: clamp(10px, 2vw, 14px);
+  }
+}
+
+/* Fallback if Font Awesome fails */
+@media (max-width: 768px) and (not .fas) {
+  .menu-toggle .fallback {
+    display: inline-block;
+  }
+  .menu-toggle .fas {
+    display: none;
   }
 }

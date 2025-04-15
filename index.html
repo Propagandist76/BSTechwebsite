@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <!-- Website - www.bs-techsupport.com -->
-
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
@@ -15,7 +14,8 @@
         <div class="logo">
           <a href="#">BS Tech</a>
         </div>
-        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        <!-- Hamburger menu button -->
+        <div class="menu-toggle"><i class="fas fa-bars"></i><span class="fallback">☰</span></div>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -31,17 +31,11 @@
       <div class="sub_title">For Small Business and residential needs</div>
       <div class="btns">
         <button>Learn More</button>
-        <a href="contact.html" class="btn"><button>Contact Us</button></a>
+        <!-- Styled link instead of button for valid HTML -->
+        <a href="contact.html" class="btn">Contact Us</a>
       </div>
     </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const toggleButton = document.querySelector(".menu-toggle");
-        const menu = document.querySelector(".menu ul");
-        toggleButton.addEventListener("click", function () {
-          menu.classList.toggle("active");
-        });
-      });
-    </script>
+    <!-- Link to JavaScript -->
+    <script src="script.js"></script>
   </body>
 </html>
