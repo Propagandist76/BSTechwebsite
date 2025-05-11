@@ -297,16 +297,17 @@ nav .menu {
   background: rgba(255, 255, 255, 0.2);
 }
 
-.accordion-header::after {
-  content: "\f078"; /* Font Awesome chevron-down */
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
+.accordion-icon {
   margin-left: auto;
+  font-size: 1.2em;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
   transition: transform 0.3s ease;
+  display: inline-block;
 }
 
-.accordion-header.active::after {
-  transform: rotate(180deg);
+.accordion-header.active .accordion-icon {
+  transform: rotate(45deg);
 }
 
 .accordion-content {
@@ -319,7 +320,7 @@ nav .menu {
 }
 
 .accordion-content.active {
-  max-height: 500px; /* Adjust based on content */
+  max-height: 500px;
   padding: 15px;
 }
 
