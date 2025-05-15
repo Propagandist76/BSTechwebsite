@@ -59,8 +59,8 @@ nav .menu {
 }
 
 .menu ul {
-  display: inline-flex;
-  transition: all 0.3s ease;
+    display: inline-flex;
+    transition: all 0.3s ease;
 }
 
 .menu ul li {
@@ -182,7 +182,26 @@ nav .menu {
     color: black;
 }
 
-/* Contact Box Styles */
+/* Review Box Styles */
+.review-box {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 720px;
+    margin: 2rem auto;
+    color: white;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(14, 124, 19, 0.5);
+}
+
+/* Ensure widget content fits well */
+.review-box #shapo-widget-86724cf60601b3447619 {
+    width: 100%;
+    color: #fff;
+}
+
+/* Contact Box Styles (kept for other pages) */
 .contact-box {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 2rem;
@@ -273,71 +292,71 @@ nav .menu {
 
 /* Accordion Styles */
 .accordion-item {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .accordion-header {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 15px;
-  cursor: pointer;
-  font-size: 1.2em;
-  font-weight: 500;
-  color: #fff;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-  display: flex;
-  align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
 }
 
 .accordion-header i {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 
 .accordion-header:hover {
-  background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .accordion-icon {
-  margin-left: auto;
-  font-size: 1.2em;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
-  transition: transform 0.3s ease;
-  display: inline-block;
+    margin-left: auto;
+    font-size: 1.2em;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    transition: transform 0.3s ease;
+    display: inline-block;
 }
 
 .accordion-header.active .accordion-icon {
-  transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  padding: 0 15px;
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 0 0 5px 5px;
-  transition: max-height 0.3s ease, padding 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0 0 5px 5px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
 .accordion-content.active {
-  max-height: 500px;
-  padding: 15px;
+    max-height: 500px;
+    padding: 15px;
 }
 
 /* Custom List Styles (adjusted for accordion) */
 .custom-list {
-  margin: 0;
-  padding-left: 20px;
+    margin: 0;
+    padding-left: 20px;
 }
 
 .custom-list li {
-  margin-bottom: 10px;
-  font-size: 1em;
-  line-height: 1.5;
+    margin-bottom: 10px;
+    font-size: 1em;
+    line-height: 1.5;
 }
 
 .custom-list b {
-  font-weight: 600;
+    font-weight: 600;
 }
 
 /* Menu toggle button */
@@ -351,55 +370,60 @@ nav .menu {
 
 /* Mobile Navigation */
 @media (max-width: 768px) {
-  .menu {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0 10px;
-  }
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 10px;
+    }
 
-  .menu ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #1b1b1b;
-    margin: 0;
-    padding: 0;
-  }
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #1b1b1b;
+        margin: 0;
+        padding: 0;
+    }
 
-  .menu ul.active {
-    display: flex;
-  }
+    .menu ul.active {
+        display: flex;
+    }
 
-  .menu ul li {
-    width: 100%;
-    text-align: left;
-    border-top: 1px solid #333;
-  }
+    .menu ul li {
+        width: 100%;
+        text-align: left;
+        border-top: 1px solid #333;
+    }
 
-  .menu ul li a {
-    display: block;
-    width: 100%;
-    padding: 12px;
-  }
+    .menu ul li a {
+        display: block;
+        width: 100%;
+        padding: 12px;
+    }
 
-  .menu-toggle {
-    display: block;
-    margin-left: auto;
-    padding: 10px;
-    font-size: 1.5rem;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+        padding: 10px;
+        font-size: 1.5rem;
+        color: white;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
 
-  /* Adjust accordion for mobile */
-  .accordion-header {
-    font-size: 1.1em;
-    padding: 12px;
-  }
+    /* Adjust accordion for mobile */
+    .accordion-header {
+        font-size: 1.1em;
+        padding: 12px;
+    }
 
-  .accordion-content.active {
-    max-height: 600px; /* Slightly higher for mobile */
-  }
+    .accordion-content.active {
+        max-height: 600px; /* Slightly higher for mobile */
+    }
+
+    /* Adjust review box for mobile */
+    .review-box {
+        padding: 1rem;
+    }
 }
